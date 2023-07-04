@@ -1,0 +1,1220 @@
+        /** =============== GENERAL CSS =============== **/
+        
+        @font-face {
+            font-family: sf-bold;
+            src: url("fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+        }
+        
+        @font-face {
+            font-family: playfair;
+            src: url("fonts/PlayfairDisplay-Medium.ttf") format("opentype");
+        }
+        
+        @font-face {
+            font-family: 'Programme';
+            src: url('fonts/Programme-Regular.ttf') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        * {
+            font-family: 'sf-bold';
+            cursor: url("img/pointer.png"), auto;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        *::selection {
+            background-color: black;
+            color: #e5e5e5;
+        }
+        
+        body {
+            background-color: #e5e5e5;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+        /** =============== GRID CONTAINERS LAYOUT =============== **/
+        
+        .main-container,
+        .about-me-container,
+        .projects-container,
+        .knowledge-container {
+            box-shadow: rgb(0, 0, 0) 0px 0px 0px 3px, rgb(0, 0, 0) 0px 0px 0px 6px, rgb(0, 0, 0) 0px 0px 9px, rgb(0, 0, 0) 0px 0px 0px 12px, rgb(0, 0, 0)0px 0px 15px;
+            display: grid;
+            height: 100%;
+            width: 50%;
+        }
+        
+        #shapes-of-colors {
+            display: grid;
+            grid-template-columns: repeat(9, 45px);
+            grid-template-rows: 50px;
+        }
+        /** =============== INDEX PAGE =============== **/
+        
+        .main-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas: "title title title" "image image sections" "image image sections";
+        }
+        
+        .main-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas: "title title title" "image image sections" "image image sections";
+        }
+        
+        .title {
+            grid-area: title;
+            display: flex;
+            flex-direction: column;
+            margin: 50px 50px 0px 0px;
+            padding: 20px;
+        }
+        
+        .title h1 {
+            font-size: 70px;
+            margin: 0px;
+            margin-bottom: 20px;
+            border-bottom: solid 2px black;
+        }
+        
+        .subtitle {
+            margin: 3px 5px 0px 0px;
+            border: 0;
+            font-size: 38px;
+            margin-left: 5px;
+            width: 300px;
+        }
+        
+        .image {
+            grid-area: image;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .image img {
+            height: 450px;
+        }
+        
+        .sections {
+            grid-area: sections;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: end;
+            margin-top: 30px;
+            gap: 5px;
+        }
+        
+        .sections-redirection {
+            text-decoration: none;
+            color: #e5e5e5;
+            width: 200px;
+            background-color: black;
+            font-size: 35px;
+            padding: 10px;
+            text-align: end;
+        }
+        
+        .sections-redirection:hover {
+            background-color: rgb(27, 27, 27);
+        }
+        
+        .social-media {
+            height: 200px;
+            width: 200px;
+            margin-top: 20px;
+            background-color: black;
+            display: grid;
+            grid-template-rows: 70% 30%;
+        }
+        
+        .social-media-img {
+            width: 200px;
+            display: grid;
+            grid-template-rows: 20% 80%;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        
+        #now-playing {
+            color: #414141;
+            font-size: 12px;
+        }
+        
+        #media-img {
+            height: 120px;
+            width: 120px;
+            background-size: cover;
+        }
+        
+        #media-img {
+            animation: rolling-disk 7.5s 0.25s linear infinite;
+        }
+        
+        @keyframes rolling-disk {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+        
+        .music-buttons {
+            border-top: #e5e5e5 2px solid;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 33%);
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .music-buttons button {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: #e5e5e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .music-buttons button a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+        }
+        
+        .music-buttons button a:hover {
+            color: rgb(87, 87, 87);
+        }
+        
+        .music-buttons button i {
+            font-size: 12px;
+        }
+        /** =============== ABOUT-ME PAGE =============== **/
+        
+        .about-me-container {
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 2fr;
+            gap: 0px 0px;
+            grid-template-areas: "title" "about-me";
+        }
+        
+        .about-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lyrics {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .lyrics-body {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            background-color: #fffc65;
+            background-size: cover;
+            border-bottom: solid 2px black;
+        }
+        
+        .lyrics-body p {
+            font-size: 25px;
+            color: black;
+            padding: 10px;
+        }
+        
+        .lyrics-body p span {
+            background-color: #e5e5e5;
+            line-height: 2em;
+            padding: 6px;
+            font-family: 'Programme';
+        }
+        
+        .lyrics-footer {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            width: 100%;
+            height: 20%;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        .lyrics-footer img {
+            width: 250px;
+            height: auto;
+        }
+        /** =============== KNOWLEDGE PAGE =============== **/
+        
+        .knowledge-container {
+            grid-template-columns: 1fr 0.3fr 1.7fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas: "title title title" "knowledge-area knowledge knowledge" "knowledge-area knowledge knowledge";
+        }
+        
+        .knowledge-area {
+            grid-area: knowledge-area;
+            width: 350px;
+        }
+        
+        .knowledge-area h1 {
+            padding: 10px;
+            font-size: 120px;
+            margin-bottom: 0px;
+        }
+        
+        .knowledge-area button {
+            background-color: #e5e5e5;
+            color: black;
+            height: 50px;
+            width: 150px;
+            margin: 30px 0px 0px 15px;
+            text-decoration: none;
+            border: none;
+        }
+        
+        .knowledge-area {
+            background-color: black;
+            color: #e5e5e5;
+        }
+        
+        .knowledge {
+            grid-area: knowledge;
+            display: grid;
+            grid-template-columns: repeat(2, 30%);
+            grid-template-rows: repeat(3, 25%);
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+        }
+        
+        .knowledge img {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .front-end-technologies {
+            display: none;
+        }
+        /** =============== PROJECTS PAGE =============== **/
+        
+        .projects-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas: "title title title" "projects projects projects" "projects projects projects";
+        }
+        
+        .projects {
+            grid-area: projects;
+            padding: 30px;
+        }
+        
+        .project {
+            display: grid;
+            grid-template-columns: 5% 55% 35% 5%;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .project-face {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #project-img {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+        
+        .project-description {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: #e5e5e5;
+            display: grid;
+            grid-template-rows: 20% 10% 50% 20%;
+            padding: 10px;
+        }
+        
+        .project-description h1 {
+            font-size: 40px;
+            font-family: 'playfair';
+            margin-top: 10px;
+        }
+        
+        .project-description h3 {
+            color: #414141;
+        }
+        
+        .project-description a {
+            background-color: #e5e5e5;
+            color: black;
+            width: 200px;
+            height: 50px;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            transition: ease-in 0.3s;
+        }
+        
+        .project-description a:hover {
+            background-color: #414141;
+            color: #e5e5e5;
+        }
+        
+        .project-button {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            background-color: #e5e5e5;
+        }
+        
+        .project-button button {
+            border: none;
+            font-size: 30px;
+            padding: 5px;
+        }
+        
+        .fa-sharp:hover {
+            color: rgb(74, 74, 74);
+        }
+        /** =============== MEDIA QUERIES =============== **/
+        /** =============== SMARTPHONES QUERY =============== **/
+        
+        @media screen and (max-width:480px) {
+            body {
+                min-height: 0px !important;
+                margin-top: 50px;
+                align-items: normal;
+            }
+            /** =============== GRID CONTAINERS LAYOUT =============== **/
+            .main-container,
+            .about-me-container,
+            .projects-container,
+            .knowledge-container {
+                height: 100%;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            #shapes-of-colors {
+                display: grid;
+                grid-template-columns: repeat(9, 25px);
+                grid-template-rows: 20px;
+            }
+            /** =============== INDEX PAGE =============== **/
+            .main-container {
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-template-rows: 1fr 1.4fr 1.6fr;
+                gap: 0px 0px;
+                width: 350px;
+                height: 750px;
+                margin-bottom: 20px;
+            }
+            .title {
+                grid-area: 1 / 1 / 2 / 2;
+                display: flex;
+                flex-direction: column;
+                margin: 50px 50px 0px 0px;
+                padding: 20px;
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            .title h1 {
+                font-size: 30px;
+                margin: 0px;
+                margin-bottom: 20px;
+                border-bottom: solid 2px black;
+            }
+            .subtitle {
+                margin: 3px 5px 0px 0px;
+                border: 0;
+                font-size: 12px;
+                margin-left: 5px;
+                width: 20px;
+            }
+            .image {
+                grid-area: image;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .image img {
+                height: 200px;
+            }
+            .sections {
+                grid-area: sections;
+                display: grid;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                justify-items: end;
+                margin-top: 30px;
+                gap: 5px;
+                grid-area: 3 / 1 / 4 / 2;
+            }
+            #media-img {
+                height: 95px;
+                width: 95px;
+                background-size: cover;
+            }
+            .sections-redirection {
+                text-decoration: none;
+                color: #e5e5e5;
+                width: 200px;
+                background-color: black;
+                font-size: 25px;
+                padding: 5px;
+                text-align: end;
+            }
+            .social-media {
+                height: 180px;
+                width: 200px;
+                margin-bottom: 20px;
+                background-color: black;
+            }
+            .music-buttons span {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: #e5e5e5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .music-buttons span i {
+                font-size: 10px;
+            }
+            /** =============== ABOUT-ME PAGE =============== **/
+            .about-me-container {
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-template-rows: 1fr 2.9fr 0.1fr;
+                gap: 0px 0px;
+                width: 350px;
+                height: 759px;
+            }
+            .about-me {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .lyrics {
+                width: 100%;
+                height: 100%;
+            }
+            .lyrics-body {
+                width: 100%;
+                height: 90%;
+                display: flex;
+                align-items: center;
+                border-bottom: solid 2px black;
+            }
+            .lyrics-body p {
+                font-size: 18px;
+                color: black;
+                padding: 10px;
+            }
+            .lyrics-body p span {
+                background-color: #e5e5e5;
+                line-height: 2em;
+                padding: 6px;
+                font-family: 'Programme';
+            }
+            .lyrics-footer {
+                display: grid;
+                grid-template-columns: 70% 30%;
+                width: 100%;
+                height: 10%;
+                align-items: center;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            .lyrics-footer p {
+                font-size: 12px;
+            }
+            .lyrics-footer img {
+                width: 100px;
+                height: auto;
+            }
+            /** =============== KNOWLEDGE PAGE =============== **/
+            .knowledge-container {
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-template-rows: 1fr 1fr 2fr;
+                gap: 0px 0px;
+                width: 350px;
+                height: 759px;
+            }
+            .knowledge-area {
+                width: 350px;
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .knowledge-area h1 {
+                padding: 10px;
+                font-size: 100px;
+                margin-bottom: 0px;
+            }
+            .knowledge-area button {
+                background-color: #e5e5e5;
+                color: black;
+                height: 50px;
+                width: 100px;
+                margin: 0px 0px 30px 15px;
+                text-decoration: none;
+                border: none;
+            }
+            .knowledge-area {
+                background-color: black;
+                color: #e5e5e5;
+            }
+            .knowledge {
+                grid-area: 3 / 1 / 4 / 2;
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                grid-template-rows: repeat(2, 50%);
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+                align-content: center;
+            }
+            .knowledge img {
+                width: 80px;
+                height: 80px;
+            }
+            /** =============== PROJECTS PAGE =============== **/
+            .projects-container {
+                display: grid;
+                grid-auto-columns: 1fr;
+                grid-template-rows: 1fr 3.4fr 0.1fr;
+                gap: 0px 0px;
+                width: 350px;
+                height: 759px;
+            }
+            .projects {
+                grid-area: 2 / 1 / 3 / 2;
+                padding: 0px !important;
+                margin-left: 30px;
+            }
+            .project {
+                display: grid;
+                grid-template-rows: 7% 44% 43% 4%;
+                grid-template-columns: auto !important;
+                height: 100%;
+                width: 100%;
+            }
+            .project-face {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #project-img {
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+            }
+            .project-description {
+                width: 100%;
+                height: 250px;
+                background-color: black;
+                color: #e5e5e5;
+                display: grid;
+                grid-template-rows: none;
+                padding: 10px;
+            }
+            .project-description h1 {
+                font-size: 40px;
+                font-family: 'playfair';
+                margin-top: 0px !important;
+            }
+            .project-description p {
+                font-size: 15px;
+            }
+            .project-description a {
+                width: 100%;
+                height: 50px;
+            }
+            .project-button {
+                height: 100%;
+                width: 100%;
+                display: flex;
+            }
+        }
+        /** =============== TABLETS QUERY =============== **/
+        
+        @media screen and (min-width:480px) and (max-width:960px) {
+            body {
+                min-height: 0px !important;
+                margin-top: 50px;
+                align-items: normal;
+            }
+            /** =============== GRID CONTAINERS LAYOUT =============== **/
+            .main-container,
+            .about-me-container,
+            .projects-container,
+            .knowledge-container {
+                height: 100%;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            #shapes-of-colors {
+                display: grid;
+                grid-template-columns: repeat(9, 25px);
+                grid-template-rows: 20px;
+            }
+            /** =============== INDEX PAGE =============== **/
+            .main-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 3.4fr 0.1fr;
+                gap: 0px 0px;
+                width: 600px;
+                height: 759px;
+                justify-content: center;
+            }
+            .title {
+                grid-area: 1 / 1 / 2 / 2;
+                display: flex;
+                flex-direction: column;
+                margin: 50px 50px 0px 0px;
+                padding: 20px;
+            }
+            .title h1 {
+                font-size: 30px;
+                margin: 0px;
+                margin-bottom: 20px;
+                border-bottom: solid 2px black;
+            }
+            .subtitle {
+                margin: 3px 5px 0px 0px;
+                border: 0;
+                font-size: 12px;
+                margin-left: 5px;
+                width: 20px;
+            }
+            .image {
+                grid-area: image;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .image img {
+                height: 200px;
+            }
+            .sections {
+                grid-area: sections;
+                display: grid;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                justify-items: end;
+                margin-top: 30px;
+                gap: 5px;
+                grid-area: 3 / 1 / 4 / 2;
+            }
+            #media-img {
+                height: 95px;
+                width: 95px;
+                background-size: cover;
+            }
+            .sections-redirection {
+                text-decoration: none;
+                color: #e5e5e5;
+                width: 200px;
+                background-color: black;
+                font-size: 25px;
+                padding: 5px;
+                text-align: end;
+            }
+            .social-media {
+                height: 180px;
+                width: 200px;
+                margin-bottom: 20px;
+                background-color: black;
+            }
+            .music-buttons span {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: #e5e5e5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .music-buttons span i {
+                font-size: 10px;
+            }
+            /** =============== ABOUT-ME PAGE =============== **/
+            .about-me-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 3.4fr 0.1fr;
+                gap: 0px 0px;
+                width: 600px;
+                height: 759px;
+                justify-content: center;
+                justify-items: center;
+            }
+            .about-me {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .lyrics {
+                width: 100%;
+                height: 100%;
+            }
+            .lyrics-body {
+                width: 100%;
+                height: 90%;
+                display: flex;
+                align-items: center;
+            }
+            .lyrics-body p {
+                font-size: 18px;
+                color: black;
+                padding: 10px;
+            }
+            .lyrics-body p span {
+                background-color: #e5e5e5;
+                line-height: 2em;
+                padding: 6px;
+                font-family: 'Programme';
+            }
+            .lyrics-footer {
+                display: grid;
+                grid-template-columns: 70% 30%;
+                width: 100%;
+                height: 10%;
+                align-items: center;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            .lyrics-footer p {
+                font-size: 12px;
+            }
+            .lyrics-footer img {
+                width: 100px;
+                height: auto;
+            }
+            /** =============== KNOWLEDGE PAGE =============== **/
+            .knowledge-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 20% 50% 30%;
+                gap: 0px 0px;
+                width: 600px;
+                height: 759px;
+                justify-content: center;
+            }
+            .knowledge-area {
+                grid-area: 2 / 1 / 3 / 2;
+                padding: 0px !important;
+                width: 300px;
+            }
+            .knowledge-area h1 {
+                padding: 10px;
+                font-size: 100px;
+                margin-bottom: 0px;
+            }
+            .knowledge-area button {
+                background-color: #e5e5e5;
+                color: black;
+                height: 50px;
+                width: 100px;
+                margin: 0px 0px 30px 15px;
+                text-decoration: none;
+                border: none;
+            }
+            .knowledge-area {
+                background-color: black;
+                color: #e5e5e5;
+            }
+            .knowledge {
+                grid-area: 3 / 1 / 4 / 2;
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                grid-template-rows: repeat(2, 50%);
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+                align-content: center;
+            }
+            .knowledge img {
+                width: 80px;
+                height: 80px;
+            }
+            /** =============== PROJECTS PAGE =============== **/
+            .projects-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 3.4fr 0.1fr;
+                gap: 0px 0px;
+                width: 600px;
+                height: 759px;
+                justify-content: center;
+            }
+            .projects {
+                grid-area: 2 / 1 / 3 / 2;
+                padding: 0px !important;
+                margin-left: 30px;
+                width: 300px;
+            }
+            .project {
+                display: grid;
+                grid-template-rows: 7% 44% 43% 4%;
+                grid-template-columns: auto !important;
+                height: 100%;
+                width: 100%;
+            }
+            .project-face {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #project-img {
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+            }
+            .project-description {
+                width: 100%;
+                height: 250px;
+                background-color: black;
+                color: #e5e5e5;
+                display: grid;
+                grid-template-rows: none;
+                padding: 10px;
+            }
+            .project-description h1 {
+                font-size: 40px;
+                font-family: 'playfair';
+                margin-top: 0px !important;
+            }
+            .project-description p {
+                font-size: 15px;
+            }
+            .project-description a {
+                width: 100%;
+                height: 50px;
+            }
+            .project-button {
+                height: 100%;
+                width: 100%;
+                display: flex;
+            }
+        }
+        /** =============== SMALL PC SCREENS QUERY =============== **/
+        
+        @media screen and (min-width: 961px) and (max-width: 1367px) {
+            body {
+                min-height: 0px !important;
+                margin-top: 50px;
+                align-items: normal;
+            }
+            /** =============== GRID CONTAINERS LAYOUT =============== **/
+            .main-container,
+            .about-me-container,
+            .projects-container,
+            .knowledge-container {
+                height: 100%;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            #shapes-of-colors {
+                display: grid;
+                grid-template-columns: repeat(9, 25px);
+                grid-template-rows: 20px;
+            }
+            /** =============== INDEX PAGE =============== **/
+            .main-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 3.4fr 0.1fr;
+                gap: 0px 0px;
+                width: 600px;
+                height: 680px;
+                justify-content: center;
+            }
+            .title {
+                grid-area: 1 / 1 / 2 / 2;
+                display: flex;
+                flex-direction: column;
+                margin: 20px 50px 0px 0px;
+                padding: 20px;
+            }
+            .title h1 {
+                font-size: 40px;
+                margin: 0px;
+                margin-bottom: 20px;
+                border-bottom: solid 2px black;
+            }
+            .subtitle {
+                margin: 3px 5px 0px 0px;
+                border: 0;
+                font-size: 12px;
+                margin-left: 5px;
+                width: 20px;
+            }
+            .image {
+                grid-area: image;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .image img {
+                height: 200px;
+            }
+            .sections {
+                grid-area: sections;
+                display: grid;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                justify-items: end;
+                margin-top: 30px;
+                gap: 5px;
+                grid-area: 3 / 1 / 4 / 2;
+            }
+            #media-img {
+                height: 65px;
+                width: 65px;
+                background-size: cover;
+            }
+            .sections-redirection {
+                text-decoration: none;
+                color: #e5e5e5;
+                width: 200px;
+                background-color: black;
+                font-size: 25px;
+                padding: 5px;
+                text-align: end;
+            }
+            .social-media {
+                height: 120px;
+                width: 200px;
+                margin-bottom: 20px;
+                background-color: black;
+            }
+            .music-buttons span {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: #e5e5e5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .music-buttons span i {
+                font-size: 10px;
+            }
+            /** =============== ABOUT-ME PAGE =============== **/
+            .about-me-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 3.4fr 0.1fr;
+                gap: 0px 0px;
+                width: 600px;
+                height: 680px;
+                justify-content: center;
+                justify-items: center;
+            }
+            .about-me {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                grid-area: 2 / 1 / 3 / 2;
+            }
+            .lyrics {
+                width: 100%;
+                height: 100%;
+            }
+            .lyrics-body {
+                width: 100%;
+                height: 90%;
+                display: flex;
+                align-items: center;
+            }
+            .lyrics-body p {
+                font-size: 18px;
+                color: black;
+                padding: 10px;
+            }
+            .lyrics-body p span {
+                background-color: #e5e5e5;
+                line-height: 2em;
+                padding: 6px;
+                font-family: 'Programme';
+            }
+            .lyrics-footer {
+                display: grid;
+                grid-template-columns: 70% 30%;
+                width: 100%;
+                height: 10%;
+                align-items: center;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            .lyrics-footer p {
+                font-size: 12px;
+            }
+            .lyrics-footer img {
+                width: 100px;
+                height: auto;
+            }
+            /** =============== KNOWLEDGE PAGE =============== **/
+            .knowledge-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 20% 50% 30%;
+                gap: 0px 0px;
+                width: 600px;
+                height: 680px;
+                justify-content: center;
+                align-items: center;
+            }
+            .knowledge-area {
+                grid-area: 2 / 1 / 3 / 2;
+                padding: 0px !important;
+                width: 400px;
+            }
+            .knowledge-area h1 {
+                padding: 10px;
+                font-size: 100px;
+                margin-bottom: 0px;
+            }
+            .knowledge-area button {
+                background-color: #e5e5e5;
+                color: black;
+                height: 50px;
+                width: 100px;
+                margin: 0px 0px 30px 15px;
+                text-decoration: none;
+                border: none;
+            }
+            .knowledge-area {
+                background-color: black;
+                color: #e5e5e5;
+            }
+            .knowledge {
+                grid-area: 3 / 1 / 4 / 2;
+                display: grid;
+                grid-template-columns: repeat(3, 30%);
+                grid-template-rows: repeat(2, 50%);
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+                align-content: center;
+                height: 200px;
+            }
+            .knowledge img {
+                width: 60px;
+                height: 60px;
+            }
+            /** =============== PROJECTS PAGE =============== **/
+            .projects-container {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 1fr 3.4fr 0.1fr;
+                gap: 0px 0px;
+                width: 600px;
+                height: 680px;
+                justify-content: center;
+            }
+            .projects {
+                grid-area: 2 / 1 / 3 / 2;
+                padding: 0px !important;
+                width: 300px;
+            }
+            .project {
+                display: grid;
+                grid-template-rows: 7% 46% 42% 2%;
+                grid-template-columns: auto !important;
+                height: 100%;
+                width: 100%;
+            }
+            .project-face {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #project-img {
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+            }
+            .project-description {
+                width: 100%;
+                height: 226px;
+                background-color: black;
+                color: #e5e5e5;
+                display: grid;
+                grid-template-rows: none;
+                padding: 10px;
+                justify-items: center;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+            .project-description h1 {
+                font-size: 40px;
+                font-family: 'playfair';
+                margin-top: 0px !important;
+            }
+            .project-description p {
+                font-size: 13px;
+                padding: 9px;
+            }
+            .project-description a {
+                width: 50%;
+                height: 32px;
+            }
+            .project-button {
+                height: 100%;
+                width: 100%;
+                display: flex;
+            }
+            .project-button button {
+                padding: 2px !important;
+            }
+        }
