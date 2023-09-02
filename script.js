@@ -120,7 +120,7 @@ const $now_playing = [
 ]
 
 const $media_redirection = [
-    'https://www.linkedin.com/in/jgianatiempo/',
+    'https://www.linkedin.com/in/juliangianatiempo/',
     'https://github.com/GianatiempoJulian',
     'mailto:gianatiempojulian@gmail.com'
 ]
