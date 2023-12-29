@@ -23,9 +23,9 @@ window.onload = function() {
 
     // Variables
     const $images = [
-        'img/bakuganapi.png',
-        'img/potrero.png',
-        'img/myhg.png'
+        'img/bakuganapi.jpg',
+        'img/potrero.jpg',
+        'img/myhg.jpg'
     ];
 
     const $titles = [
