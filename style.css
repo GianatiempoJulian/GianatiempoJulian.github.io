@@ -403,6 +403,7 @@
             border: none;
             font-size: 30px;
             padding: 5px;
+            background-color: ##e5e5e5;
         }
         
         .fa-sharp:hover {
