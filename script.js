@@ -10,7 +10,7 @@ for (let i = 0; i < 8; i++) {
 }
 
 var text = document.createElement("p");
-text.innerHTML = "BackEndDeveloper";
+text.innerHTML = "FullStackDeveloper";
 text.classList.add("subtitle");
 shapes_container.appendChild(text);
 
