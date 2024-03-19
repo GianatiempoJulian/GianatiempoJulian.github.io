@@ -131,7 +131,10 @@
         
         .sections-redirection:hover {
             background-color: rgb(27, 27, 27);
+            transition: ease-in 0.1s;
+            cursor: url("img/pointer-hover.png"), auto;
         }
+
         
         .social-media {
             height: 200px;
@@ -194,7 +197,11 @@
             justify-content: center;
             align-items: center;
         }
-        
+
+        .music-buttons button i:hover{
+            cursor: url("img/pointer-hover.png"), auto;
+        }
+
         .music-buttons button a {
             text-decoration: none;
             color: black;
@@ -320,6 +327,11 @@
         .front-end-technologies {
             display: none;
         }
+
+        #knowledge-btn:hover{
+            transition: ease-in 0.1s;
+            cursor: url("img/pointer-hover.png"), auto;
+        }
         /** =============== PROJECTS PAGE =============== **/
         
         .projects-container {
@@ -398,12 +410,22 @@
             display: flex;
             background-color: #e5e5e5;
         }
+
+        .project-button button i:hover{
+            transition: ease-in 0.1s;
+            cursor: url("img/pointer-hover.png"), auto;
+        }
         
         .project-button button {
             border: none;
             font-size: 30px;
             padding: 5px;
             background-color: #e5e5e5;
+        }
+
+        #project-link:hover{
+            transition: ease-in 0.3s;
+            cursor: url("img/pointer-hover.png"), auto;
         }
         
         .fa-sharp:hover {

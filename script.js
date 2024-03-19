@@ -23,9 +23,9 @@ window.onload = function() {
 
     // Variables
     const $images = [
-        'img/bakuganapi.jpg',
-        'img/potrero.jpg',
-        'img/myhg.jpg'
+        'img/bakuganapi.webp',
+        'img/potrero.webp',
+        'img/myhg.webp'
     ];
 
     const $titles = [
@@ -108,9 +108,9 @@ window.onload = function() {
 
 // Variables
 const $images = [
-    'img/linkedin_disc.png',
-    'img/github_disc.png',
-    'img/mail_disc.png'
+    'img/linkedin_disc.webp',
+    'img/github_disc.webp',
+    'img/mail_disc.webp'
 ];
 
 const $now_playing = [
