@@ -39,6 +39,15 @@
             align-content: center;
             align-items: center;
         }
+
+        .back-button{
+            color: rgb(197, 197, 197);
+            text-decoration: none;
+        }
+        .back-button:hover{
+            color: rgb(136, 136, 136);
+            text-decoration: none;
+        }
         /** =============== GRID CONTAINERS LAYOUT =============== **/
         
         .main-container,
@@ -106,6 +115,7 @@
         
         .image img {
             height: 450px;
+            border-radius: 20px;
         }
         
         .sections {
